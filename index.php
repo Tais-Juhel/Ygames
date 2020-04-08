@@ -9,18 +9,13 @@
     <title>Ygame - Accueil</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="onglet">
-                <a href="#" id="rules" onclick="onglet('rules')">Règles</a>
-                <a href="#" id="aPropos" onclick="onglet('aPropos')">A propos</a>
-                <span id="puce"></span>
-            </div>
-            <div >
-                <a id="jouer" href="#">JOUER</a>
-            </div>
-        </nav>
-    </header>
+    <?php 
+    if(!isset($_GET['game'])){
+        include '_header.php';
+    }elseif(isset($_GET['game'])){
+        include '_card.php';
+    }
+    ?>
     <section>
         <?php include '_rules.php';?>
         <img id="plateau" src="img/plateau_monopoly_3Dp.png" alt="plateau">
@@ -30,6 +25,12 @@
         <a href="#" onclick="onglet('accueil')"><img src="img/logoYgame.png" alt="logo"></a>
         <p>Ygame - Un jeu par de élèves Ynovant</p>
     </footer>
-    <script src="index.js"></script>
+    <?php if(!isset($_GET['game'])): ?>
+    <script src="index.js"></script> 
+    <?php 
+    endif; 
+    if(isset($_GET['game'])):?>
+    <script src="game.js"></script> 
+    <?php endif; ?>
 </body>
 </html>

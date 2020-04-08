@@ -73,6 +73,46 @@ section img.aPropos{
     width: 40vw;
 }
 
+/* SECTION :: CARDS */
+.card{
+    z-index: 2;
+    opacity: 100%;
+    background-color: #1EE300;
+    height: 150px;
+    width: 320px;
+    border-radius: 10px;
+}
+.c_left{
+    transform: translate(-90%);
+}
+.c_right{
+    transform: translate(90%);
+}
+#c1{
+    top: 16%;
+    transform: translate(0%);
+}
+#c2{
+    top: 40%;
+}
+#c3{
+    top: 64%;
+}
+#c4{
+    top: 16%;
+    right: 0.5%;
+}
+#c5{
+    top: 40%;
+    right: 0.5%;
+}
+#c6{
+    top: 64%;
+    right: 0.5%;
+}
+#cj{
+    transform: translate(260%);
+}
 
 /* SECTION :: RULES */
 div._rules{
