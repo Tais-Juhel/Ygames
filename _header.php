@@ -6,7 +6,7 @@
                 <span id="puce"></span>
             </div>
             <div >
-                <a id="jouer" href="/?game=on" onclick="game()">JOUER</a>
+                <a id="jouer" href="/pregame.php">JOUER</a>
             </div>
         </nav>
     </header>

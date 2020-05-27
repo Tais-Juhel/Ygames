@@ -1,14 +1,18 @@
-plateau.style.width = "200vh";
+plateau.style.width = "100%";
 
-const card = ["c1", "c2", "c3", "c4", "c5", "c6", "cj"];
+let numCard = 0;
+
+const card = ["c1", "c2", "c3", "c4", "c5", "c6"];
 const dé = document.getElementById("de") 
 const qstn = document.getElementsByClassName("qust")
 const abc = document.getElementsByClassName("abc")
 const buttonRep = document.getElementsByClassName("buttonRep")
+const buttonJOK = document.getElementsByClassName("JOKER")
 
 //Lance le dé
 function lancer(){
-    numCard = Math.floor(Math.random() * Math.floor(7));
+    numCard = Math.floor(Math.random() * Math.floor(6));
+    console.log(numCard);
     const playCard = document.getElementById(card[numCard]);
     playCard.style.transform = "translate(0%)";
     dé.style.display= "none";
@@ -18,9 +22,10 @@ function lancer(){
 
 //Affiche la réponse
 function reponse(){
-    buttonRep[numCard].value = "Rep";
     buttonRep[numCard].onclick = nextTour();
-    console.log('ayayaya')
+    alert('Ici la réponse !');
+    dé.style.display= "block";
+    resetOnclick();
 }
 
 //Marque la fin du tour
@@ -33,3 +38,14 @@ function nextTour(){
     }
 }
 
+function joker(){
+    if ( confirm( "Etes vous sur de vouloir utiliser le JOKER ? Il n'est disponible qu'une fois par partie !" ) ) {
+        for(let i=0; i<buttonJOK.length; i++){
+            buttonJOK[i].style.display = "none";
+        }
+    }
+}
+
+function resetOnclick(){
+    buttonRep[numCard].setAttribute('onclick', 'reponse()');
+}

@@ -9,13 +9,7 @@
     <title>Ygame - Accueil</title>
 </head>
 <body>
-    <?php 
-    if(!isset($_GET['game'])){
-        include '_header.php';
-    }elseif(isset($_GET['game'])){
-        include '_card.php';
-    }
-    ?>
+    <?php include '_header.php'; ?>
     <section>
         <?php include '_rules.php';?>
         <img id="plateau" src="img/plateau_monopoly_3Dp.png" alt="plateau">

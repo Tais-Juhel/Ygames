@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(/img/plateau_jeu_papier_pain.png);
+}
+
+#container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    height: 25%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgb(131, 131, 131);
+    border-radius: 10px;
+    padding: 10px 30px;
+    background-color: rgba(255, 255, 255, 0.781);
+    font-weight: bold;
+}
+h1{
+    margin: 0;
+}
+#jouer{
+    font-weight: 800;
+    padding: 10px 30px;
+    background-color: #1EE300;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    border: none;
+}
